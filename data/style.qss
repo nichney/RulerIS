@@ -1,0 +1,50 @@
+QMainWindow {
+    background-color: #def5fc;
+    margin: 0px;
+}
+
+QPushButton {
+    border-radius: 8px;
+    border: 1px;
+}
+
+QPushButton#no:hover {
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 50pt;
+}
+QPushButton#yes:hover {
+    background-color: white;
+    font-family: sans-serif;
+    font-size: 50pt;
+}
+QPushButton#res:hover {
+    background-color: white;
+    font-family: Helvetica, sans-serif;
+    font-size: 20pt;
+}
+
+QPushButton#no {
+    background-color: #facfd3;
+    font-family: sans-serif;
+    font-size: 50pt;
+}
+QPushButton#yes {
+    background-color: #aafaab;
+    font-family: sans-serif;
+    font-size: 50pt;
+}
+QPushButton#res {
+    background-color: #acfcfb;
+    font-family: Helvetica, sans-serif;
+    font-size: 20pt;
+}
+
+
+QLabel {
+    font-family: sans-serif;
+    font-size: 30pt;
+}
+QLabel#author {
+    font-size: 16pt;
+}
