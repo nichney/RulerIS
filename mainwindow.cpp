@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
 
   this->question = new QLabel(Q1.question.c_str(), this);
   this->question->setGeometry(5, 5, 828, 360);
-  this->author = new QLabel("Неправильно угадал? Есть ошибка?\nНапишите:\nTelegram - @kir_osm\nПочта - kirillosm09@gmail.com", this);
+  this->author = new QLabel("Неправильно угадал? Есть ошибка?\nНапишите:\nTelegram - @kir_osm\nПочта - kirillosm09@gmail.com\n\nv0.46a", this);
   this->author->setGeometry(820, 300, 240, 360); 
   this->author->setObjectName("author");
 

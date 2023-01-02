@@ -70,7 +70,7 @@ Page Q24R(true, "Ну конечно же это Леонид Брежнев!", 
 Page Q23L(false, "Но, наверное, любил целоваться с политиками?", &Q24R, &Q24L); 
 Page Q23R(true, "Вы загадали Иосифа Виссарионовича!", "img/Stalin.jpg", "А вы знали, что Сталин очень любил детей?", "https://ru.wikipedia.org/wiki/%D0%A1%D1%82%D0%B0%D0%BB%D0%B8%D0%BD,_%D0%98%D0%BE%D1%81%D0%B8%D1%84_%D0%92%D0%B8%D1%81%D1%81%D0%B0%D1%80%D0%B8%D0%BE%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"); // done
 
-Page Q20L(false, "Этот правитель - этический грузин?", &Q23R, &Q23L); // todo: ussr communists
+Page Q20L(false, "Этот правитель - этический грузин?", &Q23R, &Q23L); 
 Page Q20R(false, "Он стоял на броневике?", &Q21R, &Q21L); 
 
 Page Q17L(false, "Он был главой Временного Правительства?", &Q18R, &Q18L); 
@@ -82,8 +82,71 @@ Page Q13R(false, "Загаданный вами правитель сейчас 
 Page Q8L(false, "Был женат на полячке?", &Q9R, &Q9L); 
 Page Q8R(false, "Был президентом?", &Q13R, &Q13L); 
 
+Page Q29L(true, "Кажется, вы загадали Федора 3 Романова!", "img/Fedor.jpg", "А вы знали, что за свою жизнь он успел 2 раза жениться?", "https://ru.wikipedia.org/wiki/%D0%A4%D1%91%D0%B4%D0%BE%D1%80_III_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B5%D0%B2%D0%B8%D1%87"); // done
+Page Q29R(true, "Наверное, это Алексей Романов!", "img/Alex.jpg", "А вы знали, что при нем было принято решение о присоединении Левобережной Украины к России?", "https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9_%D0%9C%D0%B8%D1%85%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2%D0%B8%D1%87"); // done
+
+Page Q28L(false, "Носил прозвище \"Тишайший\"?", &Q29R, &Q29L); 
+Page Q28R(true, "Определенно, это Михаил Романов!", "img/Mikhail.jpg", "А вы знали, что он правил совместно со своим отцом - патриархом Филаретом?", "https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D1%85%D0%B0%D0%B8%D0%BB_%D0%A4%D1%91%D0%B4%D0%BE%D1%80%D0%BE%D0%B2%D0%B8%D1%87"); // done
+
+Page Q31L(true, "Возможно, это Петр III", "img/Petr3.jpg", "А вы знали, что он был мужем Екатерины II?", "https://ru.wikipedia.org/wiki/%D0%9F%D1%91%D1%82%D1%80_III"); // done
+Page Q31R(true, "Ну конечно же это Петр I Великий!", "img/Petr1.jpg", "А вы знали, что Петр I был очень высоким?", "https://ru.wikipedia.org/wiki/%D0%9F%D1%91%D1%82%D1%80_I"); // done
+
+Page Q34L(true, "Очевидно, что это Николай II!", "img/Kol2.jpg", "А вы знали, что он хотел перенести столицу России в Ялту?", "https://ru.wikipedia.org/wiki/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_II"); // done
+Page Q34R(true, "Очевидно, что это Николай I Романов!", "img/Kol1.jpg", "А вы знали, что он, как и Петр I, был очень высоким?", "https://ru.wikipedia.org/wiki/%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9_I"); // done
+
+Page Q37L(true, "Возможно, вы загадали Александра I", "img/Alex1.jpg", "А вы знали, что он был глух на левое ухо?", "https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_I"); // done
+Page Q37R(true, "Ну конечно же это Петр II!", "img/Petr2.jpg", "А вы знали, что он погиб от оспы?", "https://ru.wikipedia.org/wiki/%D0%9F%D1%91%D1%82%D1%80_II"); //done
+
+Page Q36L(false, "Загаданный вами правитель умер до 18-ти лет?", &Q37R, &Q37L); 
+Page Q36R(true, "Определенно, это Александр II!?", "img/Alex2.jpg", "А вы знали, что он погиб от рук террористов?", "https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_II"); // done
+
+Page Q35L(false, "Отменил крепостное право?", &Q36R, &Q36L); 
+Page Q35R(true, "Определенно, это Александр III!", "img/Alex3.jpg", "А вы знали, что при нём Россия не участвовала ни в одной войне?", "https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_III"); //done
+
+Page Q33L(false, "Он держал упавшую крышу поезда?", &Q35R, &Q35L); 
+Page Q33R(false, "А всегда ли успешно?", &Q34R, &Q34L); 
+
+Page Q32L(false, "Загаданный вами правитель подавлял восстания или революции в своей стране?", &Q33R, &Q33L); 
+Page Q32R(true, "Наверное, вы загадали Павла I!", "img/Pavel.png", "А вы знали, что, возможно, его сын Александр I знал о заговоре против Павла?", "https://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%B2%D0%B5%D0%BB_I"); // done 
+
+Page Q30L(false, "Известен законом о престолонаследии?", &Q32R, &Q32L); 
+Page Q30R(false, "Построил самый красивый город в Росии?", &Q31R, &Q31L); 
+
+Page Q27L(false, "Жил во время смуты?", &Q28R, &Q28L); 
+Page Q27R(false, "Играл \"в солдатиков\"?", &Q30R, &Q30L); 
+
+Page Q39L(true, "Кажется, вы загадали Ивана IV Грозного!", "img/Ivan4.jpg", "А вы знали, что именно он ввел Юрьев день?", "https://ru.wikipedia.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD_%D0%93%D1%80%D0%BE%D0%B7%D0%BD%D1%8B%D0%B9"); // done
+Page Q39R(true, "Определенно, это Федр I?", "img/Fed1.jpg", "А вы знали, что он был последним царем из династии Рюриковичей?", "https://ru.wikipedia.org/wiki/%D0%A4%D1%91%D0%B4%D0%BE%D1%80_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87"); // done
+
+Page Q42L(true, "Наверное, вы загадали Дмитрия Донского", "img/DDon.jpg", "А вы знали, что при нем московский Кремль стал каменным?", "https://ru.wikipedia.org/wiki/%D0%94%D0%BC%D0%B8%D1%82%D1%80%D0%B8%D0%B9_%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B8%D1%87_%D0%94%D0%BE%D0%BD%D1%81%D0%BA%D0%BE%D0%B9"); // done
+Page Q42R(true, "Возможно, вы загадали Александра Невского", "img/AlexN.jpg", "А вы знали, что Александр Невский не проиграл ни одного сражения?", "https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%B8%D1%87_%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9"); // done
+
+Page Q44L(true, "Возможно. это Иван III Великий", "img/Ivan3.jpg", "А вы знали, что при нём Россия освободилась от Татаро-монгольского ига?", "https://ru.wikipedia.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD_III_%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%B5%D0%B2%D0%B8%D1%87"); // done
+Page Q44R(true, "Ну конечно же это Иван Калита!", "img/IvanK.jpg", "а вы знали, что Калита получил право собирать дань с русских земель за то, что подавил восстание против татар в Твери?", "https://ru.wikipedia.org/wiki/%D0%98%D0%B2%D0%B0%D0%BD_I_%D0%94%D0%B0%D0%BD%D0%B8%D0%BB%D0%BE%D0%B2%D0%B8%D1%87_%D0%9A%D0%B0%D0%BB%D0%B8%D1%82%D0%B0"); // done
+
+Page Q43L(true, "Скорее всего, вы загадали Василия II Темного", "img/Vas2t.jpg", "Вы знали, что он получил такое прозвище, потому что был слепым?", "https://ru.wikipedia.org/wiki/%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9_II_%D0%A2%D1%91%D0%BC%D0%BD%D1%8B%D0%B9"); // done
+Page Q43R(false, "Он обманывал татар на деньги?", &Q44R, &Q44L); 
+
+Page Q41L(false, "Его имя - Иван?", &Q43R, &Q43L);
+Page Q41R(false, "Князь Новгородский?", &Q42R, &Q42L); 
+// !!!!!!!!!!!!!!!!!!
+Page Q46L(false, "Он жил до раздробленности Руси??", &Q45R, &Q45L); 
+Page Q46R(false, "Известен благодаря битвам?", &Q41R, &Q41L); 
+
+Page Q45L(false, "пытался объединить Русь?", &Q46R, &Q46L); 
+Page Q45R(false, "Был эпилептиком?", &Q39R, &Q39L); // todo: rurikovichi not-tataro-mongols before
+
+Page Q40L(false, "Он жил до раздробленности Руси??", &Q45R, &Q45L); 
+Page Q40R(false, "Известен благодаря битвам?", &Q41R, &Q41L); 
+
+Page Q38L(false, "Он застал Татаро-монгольское иго?", &Q40R, &Q40L); 
+Page Q38R(false, "Был эпилептиком?", &Q39R, &Q39L); 
+
+Page Q26L(false, "Был императором?", &Q27R, &Q27L); 
+Page Q26R(false, "Носил титул царя?", &Q38R, &Q38L); 
+
 Page Q7L(false, "Предствитель XX века?", &Q8R, &Q8L);
-Page Q7R(false, "Присоединила Крым к России", &Q5R, &Q5L); // TODO: MONARCH
+Page Q7R(false, "И он из рода Рюриковичей?", &Q26R, &Q26L);
 
 Page Q2L(false, "Она из рода рюриковичей?", &Q3R, &Q3L);
 Page Q2R(false, "Он - представитель одной из основных правящих династий России?", &Q7R, &Q7L);
