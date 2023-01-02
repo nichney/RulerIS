@@ -1,5 +1,6 @@
 #include <QApplication>
 #include <QFile>
+#include <QIcon>
 
 #include "mainwindow.h"
 
@@ -11,7 +12,7 @@ int main(int argc, char **argv)
     qssStyle.open(QFile::ReadOnly);
     app.setStyleSheet(qssStyle.readAll());
     qssStyle.close();
-
+    app.setWindowIcon(QIcon("data/logo.png"));
     MainWindow mainWindow;
     mainWindow.show();
 

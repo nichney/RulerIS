@@ -5,10 +5,12 @@
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent)
 {
-  this->setGeometry(400, 200, 1060, 670); // resize and move window
+  // resize and move window
+  this->move(400, 200); 
+  this->setFixedSize(1060, 670);
 
   // create buttons
-  // setgeometry(x, y, width, height)
+  // setGeometry(x, y, width, height)
   this->y_button = new QPushButton("Да", this); // Yes-button
   this->y_button->setGeometry(5, 375, 360, 251);
   this->y_button->setObjectName("yes");
@@ -19,25 +21,28 @@ MainWindow::MainWindow(QWidget *parent)
   this->r_button->setGeometry(828, 5, 216, 54);
   this->r_button->setObjectName("res");
 
+  // create labels
   this->question = new QLabel(Q1.question.c_str(), this);
   this->question->setGeometry(5, 5, 828, 360);
-  this->author = new QLabel("Неправильно угадал? Есть ошибка?\nНапишите:\nTelegram - @kir_osm\nПочта - kirillosm09@gmail.com\n\nv1.52b", this);
+  this->author = new QLabel("Неправильно угадал? Есть ошибка?\nНапишите:\nTelegram - @kir_osm\nПочта - kirillosm09@gmail.com\n\nv2.52b", this);
   this->author->setGeometry(820, 300, 240, 360); 
   this->author->setObjectName("author");
 
- 
+  // hidden elements (for last screen)
   this->photo = new QLabel("фото", this); 
-  this->photo->hide(); // show when last page
+  this->photo->hide(); 
   this->wikiLink = new QLabel("wiki", this); 
-  this->wikiLink->hide(); // show when last page
+  this->wikiLink->hide(); 
   this->description = new QLabel("description", this); 
-  this->description->hide(); // show when last page
+  this->description->hide(); 
 
-  this->wikiLink->setWordWrap(true); // auto wrap
+  // auto wrap
+  this->wikiLink->setWordWrap(true); 
   this->question->setWordWrap(true);
   this->description->setWordWrap(true);
   this->author->setWordWrap(true);
 
+  // set alignment
   this->question->setAlignment(Qt::AlignLeft);
   this->wikiLink->setAlignment(Qt::AlignTop);
   this->description->setAlignment(Qt::AlignTop);
@@ -91,17 +96,17 @@ void MainWindow::updateScreenY(){
   this->n_button->show();
   this->question->setText(CURRENT.question.c_str());
   this->question->setGeometry(5, 5, 828, 360);
-  //this->question->setAlignment(Qt::AlignLeft);
+  this->question->setFixedWidth(828); // idk why setGeometry() dont change Width. Perhaps reason is setFixedWidth call in uodateScreenN()
 }
 
 void MainWindow::updateScreenN(){
+  // draw screen when last question
   this->y_button->hide();
   this->n_button->hide();
   this->question->setText(CURRENT.question.c_str());
-  //this->question->setGeometry(265, 5, 454, 180);
   this->question->move(265, 5);
   this->question->setFixedWidth(454);
-   this->question->setAlignment(Qt::AlignTop);
+  this->question->setAlignment(Qt::AlignTop);
 
   this->photo->setStyleSheet(std::string("background-image: url(" + CURRENT.photoPath + "); background-repeat: no-repeat;").c_str());
   this->photo->setGeometry(5, 5, 255, 370);
@@ -111,7 +116,7 @@ void MainWindow::updateScreenN(){
   this->wikiLink->setGeometry(265, 187, 525, 175);
   this->wikiLink->setTextFormat(Qt::RichText);
   this->wikiLink->setTextInteractionFlags(Qt::TextBrowserInteraction);
-  this->wikiLink->setOpenExternalLinks(true);
+  this->wikiLink->setOpenExternalLinks(true); // clickable link
 
   this->description->setText(CURRENT.description.c_str());
   this->description->setGeometry(265, 362, 525, 300);

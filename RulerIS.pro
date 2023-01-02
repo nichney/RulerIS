@@ -18,4 +18,3 @@ SOURCES += main.cpp mainwindow.cpp pages.cpp
 HEADERS += mainwindow.h page.h
 
 QT = core gui widgets
-
