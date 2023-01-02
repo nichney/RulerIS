@@ -91,7 +91,7 @@ void MainWindow::updateScreenY(){
   this->n_button->show();
   this->question->setText(CURRENT.question.c_str());
   this->question->setGeometry(5, 5, 828, 360);
-  this->question->setAlignment(Qt::AlignLeft);
+  //this->question->setAlignment(Qt::AlignLeft);
 }
 
 void MainWindow::updateScreenN(){
