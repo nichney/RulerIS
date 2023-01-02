@@ -129,14 +129,32 @@ Page Q43R(false, "Он обманывал татар на деньги?", &Q44R,
 
 Page Q41L(false, "Его имя - Иван?", &Q43R, &Q43L);
 Page Q41R(false, "Князь Новгородский?", &Q42R, &Q42L); 
-// !!!!!!!!!!!!!!!!!!
-Page Q46L(false, "Он жил до раздробленности Руси??", &Q45R, &Q45L); 
-Page Q46R(false, "Известен благодаря битвам?", &Q41R, &Q41L); 
 
-Page Q45L(false, "пытался объединить Русь?", &Q46R, &Q46L); 
-Page Q45R(false, "Был эпилептиком?", &Q39R, &Q39L); // todo: rurikovichi not-tataro-mongols before
+Page Q47L(true, "Наверное, это Всеволод Большое Гнездо", "img/VseBG.jpg", "А вы знали, что он получил свое прозвищу из-за того, что  у него было 12 детей?", "https://ru.wikipedia.org/wiki/%D0%92%D1%81%D0%B5%D0%B2%D0%BE%D0%BB%D0%BE%D0%B4_%D0%AE%D1%80%D1%8C%D0%B5%D0%B2%D0%B8%D1%87_%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%BE%D0%B5_%D0%93%D0%BD%D0%B5%D0%B7%D0%B4%D0%BE"); // done
+Page Q47R(true, "Очевидно, это Юрий Долгорукий!", "img/UriiDolg.png", "А вы знали, что его так прозвали за стремление править в разных русских княжествах?", "https://ru.wikipedia.org/wiki/%D0%AE%D1%80%D0%B8%D0%B9_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87_%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D1%80%D1%83%D0%BA%D0%B8%D0%B9"); // done 
 
-Page Q40L(false, "Он жил до раздробленности Руси??", &Q45R, &Q45L); 
+Page Q48L(true, "Скорее всего, это Владимир Мономах", "img/VMon.jpg", "А вы знали, что он носил прикольную шапку?", "https://ru.wikipedia.org/wiki/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%92%D1%81%D0%B5%D0%B2%D0%BE%D0%BB%D0%BE%D0%B4%D0%BE%D0%B2%D0%B8%D1%87_%D0%9C%D0%BE%D0%BD%D0%BE%D0%BC%D0%B0%D1%85"); //done
+Page Q48R(true, "Наверное, это Андрей Боголюбский", "img/ABog.jpg", "А вы знали, что он был глубоко верующим человеком?", "https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9_%D0%AE%D1%80%D1%8C%D0%B5%D0%B2%D0%B8%D1%87_%D0%91%D0%BE%D0%B3%D0%BE%D0%BB%D1%8E%D0%B1%D1%81%D0%BA%D0%B8%D0%B9"); //done
+
+Page Q46L(false, "Он основал Москву?", &Q47R, &Q47L); 
+Page Q46R(false, "Он ходил в походы на Булгарию?", &Q48R, &Q48L);
+
+Page Q50L(true, "Наверное, это Ярослав Мудрый", "img/Yam.jpg", "А вы знали, что именно с него началось раздробление Руси?", "https://ru.wikipedia.org/wiki/%D0%AF%D1%80%D0%BE%D1%81%D0%BB%D0%B0%D0%B2_%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B8%D1%87_%D0%9C%D1%83%D0%B4%D1%80%D1%8B%D0%B9"); // done
+Page Q50R(true, "Это же Владимир Красное Солнышко!", "img/Vsv.jpg", "А вы знали, что крещение Руси произошло в 988 году н.э.?", "https://ru.wikipedia.org/wiki/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D1%81%D0%BB%D0%B0%D0%B2%D0%B8%D1%87"); // done
+
+Page Q52L(true, "Вы загадали князя Игоря!", "img/Igor.png", "А вы знали, что нельзя собирать дань с древлян 2 раза подряд?", "https://ru.wikipedia.org/wiki/%D0%98%D0%B3%D0%BE%D1%80%D1%8C_%D0%A0%D1%8E%D1%80%D0%B8%D0%BA%D0%BE%D0%B2%D0%B8%D1%87"); // done
+Page Q52R(true, "Вы загадали Вещего Олега!", "img/Oleg.jpg", "А вы знали, что Олег подарил воротам Византии свой щит?", "https://ru.wikipedia.org/wiki/%D0%9E%D0%BB%D0%B5%D0%B3_%D0%92%D0%B5%D1%89%D0%B8%D0%B9"); // done
+
+Page Q51L(false, "Умер от укуса змеи?", &Q52R, &Q52L); 
+Page Q51R(true, "Кажется, это Рюрик!", "img/Rurik.jpg", "А вы знали, что у него было 2 брата?", "https://ru.wikipedia.org/wiki/%D0%A0%D1%8E%D1%80%D0%B8%D0%BA"); // done 
+
+Page Q49L(false, "Приехал из Скандинавии?", &Q51R, &Q51L); 
+Page Q49R(false, "Он крестил Русь?", &Q50R, &Q50L); 
+
+Page Q45L(false, "Пытался объединить Русь?", &Q46R, &Q46L); 
+Page Q45R(false, "Он был православным?", &Q49R, &Q49L); 
+
+Page Q40L(false, "Он жил до раздробленности Руси?", &Q45R, &Q45L); 
 Page Q40R(false, "Известен благодаря битвам?", &Q41R, &Q41L); 
 
 Page Q38L(false, "Он застал Татаро-монгольское иго?", &Q40R, &Q40L); 
@@ -151,6 +169,6 @@ Page Q7R(false, "И он из рода Рюриковичей?", &Q26R, &Q26L);
 Page Q2L(false, "Она из рода рюриковичей?", &Q3R, &Q3L);
 Page Q2R(false, "Он - представитель одной из основных правящих династий России?", &Q7R, &Q7L);
 
-Page Q1(false, "Загаданный Вами правитель - мужчина?", &Q2R, &Q2L);
+Page Q1(false, "Загадайте любого правителя России (от Рюрика до Путина)\nЗагаданный Вами правитель - мужчина?", &Q2R, &Q2L);
 
 Page CURRENT = Q1;
