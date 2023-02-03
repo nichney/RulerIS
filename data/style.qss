@@ -10,18 +10,12 @@ QPushButton {
 
 QPushButton#no:hover {
     background-color: white;
-    font-family: sans-serif;
-    font-size: 50pt;
 }
 QPushButton#yes:hover {
     background-color: white;
-    font-family: sans-serif;
-    font-size: 50pt;
 }
 QPushButton#res:hover {
     background-color: white;
-    font-family: Helvetica, sans-serif;
-    font-size: 20pt;
 }
 
 QPushButton#no {
@@ -42,7 +36,7 @@ QPushButton#res {
 
 
 QLabel {
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
     font-size: 30pt;
 }
 QLabel#author {

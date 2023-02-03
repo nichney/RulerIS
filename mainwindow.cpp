@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent)
   // create labels
   this->question = new QLabel(Q1.question.c_str(), this);
   this->question->setGeometry(5, 5, 828, 360);
-  this->author = new QLabel("Неправильно угадал? Есть ошибка?\nНапишите:\nTelegram - @kir_osm\nПочта - kirillosm09@gmail.com\n\nПрограмма сделана с помощью фреймворка Qt\n(https://qt.io)\n\n3.52b", this);
+  this->author = new QLabel("Неправильно угадал? Есть ошибка?\nНапишите:\nTelegram - @kir_osm\nПочта - kirillosm09@gmail.com\n\n3.53b", this);
   this->author->setGeometry(820, 200, 240, 460); 
   this->author->setObjectName("author");
 
@@ -96,7 +96,7 @@ void MainWindow::updateScreenY(){
   this->n_button->show();
   this->question->setText(CURRENT.question.c_str());
   this->question->setGeometry(5, 5, 828, 360);
-  this->question->setFixedWidth(828); // idk why setGeometry() dont change Width. Perhaps reason is setFixedWidth call in uodateScreenN()
+  this->question->setFixedWidth(828); // idk why setGeometry() dont change Width. Perhaps reason is setFixedWidth call in updateScreenN()
 }
 
 void MainWindow::updateScreenN(){
