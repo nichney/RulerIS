@@ -9,6 +9,14 @@ MainWindow::MainWindow(QWidget *parent)
   this->move(400, 200); 
   this->setFixedSize(1060, 670);
 
+  // Menu
+  QMenuBar * mainMenu = new QMenuBar;
+  this->helpMenu = new QMenu("*Помощь*");
+  this->helpMenu->addAction("О программе", this, SLOT(programInfo()));
+  this->helpMenu->addAction("About Qt", QApplication::instance(), SLOT(aboutQt()));
+  mainMenu->addMenu(helpMenu);
+  this->setMenuBar(mainMenu);
+
   // create buttons
   // setGeometry(x, y, width, height)
   this->y_button = new QPushButton("Да", this); // Yes-button
@@ -23,8 +31,8 @@ MainWindow::MainWindow(QWidget *parent)
 
   // create labels
   this->question = new QLabel(Q1.question.c_str(), this);
-  this->question->setGeometry(5, 5, 828, 360);
-  this->author = new QLabel("Неправильно угадал? Есть ошибка?\nНапишите:\nTelegram - @kir_osm\nПочта - kirillosm09@gmail.com\n\n3.53b", this);
+  this->question->setGeometry(5, 35, 828, 360);
+  this->author = new QLabel("Неправильно угадал? Есть ошибка?\nНапишите:\nTelegram - @kir_osm\nПочта - kirillosm09@gmail.com", this);
   this->author->setGeometry(820, 200, 240, 460); 
   this->author->setObjectName("author");
 
@@ -53,6 +61,11 @@ MainWindow::MainWindow(QWidget *parent)
   connect(r_button, &QPushButton::released, this, &MainWindow::handleRestartButton);
 }
  
+void MainWindow::programInfo()
+{
+  QMessageBox::information(this,"О программе" , "<font size = 0.5>RulerIS - информационная система, которая угадывает правителя России, начиная от Рюрика и заканчивая Путиным. Процесс отгадывания правителя происходит с помощью ответов пользователем на вопросы с возможными вариантами ответа \"Да\" и \"Нет\". В правом верхнем углу доступна кнопка \"Сначала\", которая включает на экране первый вопрос системы. Version: 3.55b\n2022-2023.</font>");
+}
+
 void MainWindow::handleYesButton()
 {
   if(CURRENT.PageYes->isLast){
@@ -95,7 +108,7 @@ void MainWindow::updateScreenY(){
   this->y_button->show();
   this->n_button->show();
   this->question->setText(CURRENT.question.c_str());
-  this->question->setGeometry(5, 5, 828, 360);
+  this->question->setGeometry(5, 35, 828, 360);
   this->question->setFixedWidth(828); // idk why setGeometry() dont change Width. Perhaps reason is setFixedWidth call in updateScreenN()
 }
 
@@ -104,22 +117,22 @@ void MainWindow::updateScreenN(){
   this->y_button->hide();
   this->n_button->hide();
   this->question->setText(CURRENT.question.c_str());
-  this->question->move(265, 5);
+  this->question->move(265, 35);
   this->question->setFixedWidth(454);
   this->question->setAlignment(Qt::AlignTop);
 
   this->photo->setStyleSheet(std::string("background-image: url(" + CURRENT.photoPath + "); background-repeat: no-repeat;").c_str());
-  this->photo->setGeometry(5, 5, 255, 370);
+  this->photo->setGeometry(5, 35, 255, 370);
   this->photo->setText("");
 
   this->wikiLink->setText(std::string("<a href=\""+ CURRENT.wikiLink +"\">Ссылка на Википедию (можно нажать)</a>").c_str());
-  this->wikiLink->setGeometry(265, 187, 525, 175);
+  this->wikiLink->setGeometry(265, 222, 525, 175);
   this->wikiLink->setTextFormat(Qt::RichText);
   this->wikiLink->setTextInteractionFlags(Qt::TextBrowserInteraction);
   this->wikiLink->setOpenExternalLinks(true); // clickable link
 
   this->description->setText(CURRENT.description.c_str());
-  this->description->setGeometry(265, 362, 525, 300);
+  this->description->setGeometry(265, 397, 525, 300);
 
 
   this->photo->show();

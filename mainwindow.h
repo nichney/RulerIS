@@ -1,8 +1,12 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QApplication>
 #include <QMainWindow>
 #include <QPushButton>
+#include <QMenu>
+#include <QMenuBar>
+#include <QMessageBox>
 #include <QLabel>
 #include <QFont>
 #include <string>
@@ -23,6 +27,7 @@ private slots:
   void handleRestartButton();
   void updateScreenY();
   void updateScreenN();
+  void programInfo();
 private:
   QPushButton *y_button; // yes-button
   QPushButton *n_button; // no-button
@@ -32,6 +37,7 @@ private:
   QLabel      *description;
   QLabel      *author;
   QLabel      *wikiLink;
+  QMenu       *helpMenu;
   
   
 };

@@ -163,7 +163,7 @@ Page Q38R(false, "Был эпилептиком?", &Q39R, &Q39L);
 Page Q26L(false, "Был императором?", &Q27R, &Q27L); 
 Page Q26R(false, "Носил титул царя?", &Q38R, &Q38L); 
 
-Page Q7L(false, "Предствитель XX века?", &Q8R, &Q8L);
+Page Q7L(false, "Предствитель XX-XXI века?", &Q8R, &Q8L);
 Page Q7R(false, "И он из рода Рюриковичей?", &Q26R, &Q26L);
 
 Page Q2L(false, "Она из рода рюриковичей?", &Q3R, &Q3L);

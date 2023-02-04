@@ -36,8 +36,8 @@ DEL_DIR       = rmdir
 MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
-DISTNAME      = RulerIS1.0.0
-DISTDIR = /home/kirill/projects/RulerIS/.tmp/RulerIS1.0.0
+DISTNAME      = RulerIS3.55
+DISTDIR = /home/kirill/projects/RulerIS/.tmp/RulerIS3.55
 LINK          = g++
 LFLAGS        = -Wl,-O1 -pipe -O2 -flto=16 -fno-fat-lto-objects -fuse-linker-plugin -fPIC
 LIBS          = $(SUBLIBS) /usr/lib/libQt5Widgets.so /usr/lib/libQt5Gui.so /usr/lib/libQt5Core.so -lGL -lpthread   

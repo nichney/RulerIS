@@ -13,6 +13,7 @@ int main(int argc, char **argv)
     app.setStyleSheet(qssStyle.readAll());
     qssStyle.close();
     app.setWindowIcon(QIcon("data/logo.png"));
+
     MainWindow mainWindow;
     mainWindow.show();
 

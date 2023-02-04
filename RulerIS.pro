@@ -16,5 +16,5 @@ INCLUDEPATH += .
 # Input
 SOURCES += main.cpp mainwindow.cpp pages.cpp
 HEADERS += mainwindow.h page.h
-
+VERSION = 3.55
 QT = core gui widgets
