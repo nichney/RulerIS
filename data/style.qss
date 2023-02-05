@@ -34,8 +34,18 @@ QPushButton#res {
     font-size: 20pt;
 }
 
-
 QLabel {
+    font-size: 14pt;
+}
+QLabel#wiki {
+    font-family: Helvetica, sans-serif;
+    font-size: 30pt;
+}
+QLabel#description {
+    font-family: Helvetica, sans-serif;
+    font-size: 30pt;
+}
+QLabel#question  {
     font-family: Helvetica, sans-serif;
     font-size: 30pt;
 }

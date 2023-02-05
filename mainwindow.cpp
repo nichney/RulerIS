@@ -11,7 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
 
   // Menu
   QMenuBar * mainMenu = new QMenuBar;
-  this->helpMenu = new QMenu("*Помощь*");
+  this->helpMenu = new QMenu("Помощь");
+  this->helpMenu->addAction("Справка", this, SLOT(whatInfo()));
   this->helpMenu->addAction("О программе", this, SLOT(programInfo()));
   this->helpMenu->addAction("About Qt", QApplication::instance(), SLOT(aboutQt()));
   mainMenu->addMenu(helpMenu);
@@ -26,7 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
   this->n_button->setGeometry(401, 375, 360,  251);
   this->n_button->setObjectName("no");
   this->r_button = new QPushButton("Сначала", this); // Restart button
-  this->r_button->setGeometry(828, 5, 216, 54);
+  this->r_button->setGeometry(828, 35, 216, 54);
   this->r_button->setObjectName("res");
 
   // create labels
@@ -34,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
   this->question->setGeometry(5, 35, 828, 360);
   this->author = new QLabel("Неправильно угадал? Есть ошибка?\nНапишите:\nTelegram - @kir_osm\nПочта - kirillosm09@gmail.com", this);
   this->author->setGeometry(820, 200, 240, 460); 
-  this->author->setObjectName("author");
+  
 
   // hidden elements (for last screen)
   this->photo = new QLabel("фото", this); 
@@ -44,6 +45,11 @@ MainWindow::MainWindow(QWidget *parent)
   this->description = new QLabel("description", this); 
   this->description->hide(); 
 
+  // obj names
+  this->author->setObjectName("author");
+  this->question->setObjectName("question");
+  this->wikiLink->setObjectName("wiki");
+  this->description->setObjectName("description");
   // auto wrap
   this->wikiLink->setWordWrap(true); 
   this->question->setWordWrap(true);
@@ -61,9 +67,14 @@ MainWindow::MainWindow(QWidget *parent)
   connect(r_button, &QPushButton::released, this, &MainWindow::handleRestartButton);
 }
  
+void MainWindow::whatInfo()
+{
+  QMessageBox::about(this,"Справка" , "RulerIS - информационная система, которая угадывает правителя России, начиная от Рюрика и заканчивая Путиным. Процесс отгадывания правителя происходит с помощью ответов пользователем на вопросы с возможными вариантами ответа \"Да\" и \"Нет\". В правом верхнем углу доступна кнопка \"Сначала\", которая включает на экране первый вопрос системы.");
+}
+
 void MainWindow::programInfo()
 {
-  QMessageBox::information(this,"О программе" , "<font size = 0.5>RulerIS - информационная система, которая угадывает правителя России, начиная от Рюрика и заканчивая Путиным. Процесс отгадывания правителя происходит с помощью ответов пользователем на вопросы с возможными вариантами ответа \"Да\" и \"Нет\". В правом верхнем углу доступна кнопка \"Сначала\", которая включает на экране первый вопрос системы. Version: 3.55b\n2022-2023.</font>");
+  QMessageBox::about(this,"О программе" , "Version: 3.59b\n\nDate: 05.02.2023\n\nQt version: 5.15.8\n\nCode & Design: Kirill Osmolovsky (kirillosm09@gmail.com)\n\nPictures: ru.wikipedia.org\n\nInformation and facts: Kirill Osmolovsky.");
 }
 
 void MainWindow::handleYesButton()

@@ -28,6 +28,7 @@ private slots:
   void updateScreenY();
   void updateScreenN();
   void programInfo();
+  void whatInfo();
 private:
   QPushButton *y_button; // yes-button
   QPushButton *n_button; // no-button
