@@ -4,3 +4,4 @@ RulerIS
 LinuxRelease/*
 WindowsRelease/*
 compilationLogs/*
+Makefile
