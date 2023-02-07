@@ -1,6 +1,6 @@
 #!/bin/bash
 
-MXEPATH = "/home/$whoami/mxe/usr/bin"
+MXEPATH="/home/$whoami/mxe/usr/bin"
 echo "Creating log file in compilationLogs/$LOGFILE"
 mkdir compilationLogs
 touch compilationLogs/$LOGFILE
@@ -14,6 +14,7 @@ if [ "$1" = "linux" ]
     rm *.o > "compilationLogs/log.txt"
     rm moc_predefs.h > "compilationLogs/log.txt"
     rm moc_mainwindow.cpp > "compilationLogs/log.txt"
+    rm Makefile > "compilationLogs/log.txt"
     echo "End removing obj files"
 
     elif [ "$1" = "windows" ]
