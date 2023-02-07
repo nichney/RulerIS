@@ -2,3 +2,5 @@ RulerIS
 *.zip
 *.tar.gz
 LinuxRelease/*
+WindowsRelease/*
+compilationLogs/*

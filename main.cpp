@@ -6,16 +6,16 @@
 
 int main(int argc, char **argv)
 {
-    QApplication app (argc, argv);
+    QApplication app(argc, argv);
 
-    QFile qssStyle("data/style.qss");
+    QFile qssStyle("data/style.qss"); // load qss from 'data/style.qss'
     qssStyle.open(QFile::ReadOnly);
-    app.setStyleSheet(qssStyle.readAll());
-    qssStyle.close();
-    app.setWindowIcon(QIcon("data/logo.png"));
+    app.setStyleSheet(qssStyle.readAll()); // set style from file
+    qssStyle.close(); // close file
+    app.setWindowIcon(QIcon("data/logo.png")); // set icon
 
-    MainWindow mainWindow;
-    mainWindow.show();
+    MainWindow mainWindow; // create and show main app window
+    mainWindow.show(); 
 
     return app.exec();
 }

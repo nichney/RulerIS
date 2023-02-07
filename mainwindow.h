@@ -25,8 +25,8 @@ private slots:
   void handleYesButton();
   void handleNoButton();
   void handleRestartButton();
-  void updateScreenY();
-  void updateScreenN();
+  void updateScreenQuestion();
+  void updateScreenLastPage();
   void programInfo();
   void whatInfo();
 private:

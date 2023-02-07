@@ -8,45 +8,30 @@ QPushButton {
     border: 1px;
 }
 
-QPushButton#no:hover {
-    background-color: white;
-}
-QPushButton#yes:hover {
-    background-color: white;
-}
-QPushButton#res:hover {
-    background-color: white;
-}
-
 QPushButton#no {
     background-color: #facfd3;
-    font-family: sans-serif;
+    font-family: "Noto Sans";
     font-size: 50pt;
 }
 QPushButton#yes {
     background-color: #aafaab;
-    font-family: sans-serif;
+    font-family: "Noto Sans";
     font-size: 50pt;
 }
 QPushButton#res {
     background-color: #acfcfb;
-    font-family: Helvetica, sans-serif;
+    font-family: "Helvetica";
     font-size: 20pt;
+}
+QPushButton#no:hover, QPushButton#yes:hover, QPushButton#res:hover {
+    background-color: white;
 }
 
 QLabel {
     font-size: 14pt;
 }
-QLabel#wiki {
-    font-family: Helvetica, sans-serif;
-    font-size: 30pt;
-}
-QLabel#description {
-    font-family: Helvetica, sans-serif;
-    font-size: 30pt;
-}
-QLabel#question  {
-    font-family: Helvetica, sans-serif;
+QLabel#wiki, QLabel#description, QLabel#question{
+    font-family: "Helvetica";
     font-size: 30pt;
 }
 QLabel#author {
