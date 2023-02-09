@@ -75,7 +75,7 @@ void MainWindow::whatInfo()
 
 void MainWindow::programInfo()
 {
-  QMessageBox::about(this,"О программе" , "Version: 3.73b\n\nDate: 07.02.2023\n\nCode & Design: Kirill Osmolovsky (kirillosm09@gmail.com)\n\nPictures: ru.wikipedia.org\n\nScientific adviser: Larisa Vsevolodvna Kolyagina");
+  QMessageBox::about(this,"О программе" , "Version: 3.75b\n\nDate: 09.02.2023\n\nCode & Design: Kirill Osmolovsky (kirillosm09@gmail.com)\n\nPictures: ru.wikipedia.org\n\nScientific adviser: Larisa Vsevolodvna Kolyagina");
 }
 
 void MainWindow::handleYesButton()

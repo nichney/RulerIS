@@ -5,3 +5,4 @@ LinuxRelease/*
 WindowsRelease/*
 compilationLogs/*
 Makefile
+.qmake.stash
