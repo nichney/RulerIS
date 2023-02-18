@@ -9,7 +9,11 @@
 #include <QMessageBox>
 #include <QLabel>
 #include <QFont>
+#include <QFontDatabase>
+#include <QGraphicsDropShadowEffect>
+
 #include <string>
+
 #include "page.h"
 
 namespace Ui {
@@ -33,11 +37,12 @@ private:
   QPushButton *y_button; // yes-button
   QPushButton *n_button; // no-button
   QPushButton *r_button; // restart button
+  QPushButton *startButton;
   QLabel      *question;
   QLabel      *photo;
   QLabel      *description;
-  QLabel      *author;
   QLabel      *wikiLink;
+  QLabel      *last;
   QMenu       *helpMenu;
   
   

@@ -1,39 +1,62 @@
-QMainWindow {
-    background-color: #def5fc;
-    margin: 0px;
+QMenu {
+    background-color: #292929;
+    font-size: 16pt;
+    color: #9CA090
+}
+QMenu::item:selected{
+    background-color: white;
+}
+QMenuBar{
+    background-color: #292929;
+    color: #9CA090;
 }
 
-QPushButton {
-    border-radius: 8px;
-    border: 1px;
+QLabel#question{
+    font-size: 68px;
+    color: #BE9D71;
 }
 
-QPushButton#no {
-    background-color: #facfd3;
-    font-family: "Noto Sans";
-    font-size: 50pt;
+QPushButton#start{
+    background-color: #AE3B2A;
+    border-radius: 22px;
+    font-size: 22pt;
+    color: #BE9D71;
 }
-QPushButton#yes {
-    background-color: #aafaab;
-    font-family: "Noto Sans";
-    font-size: 50pt;
-}
-QPushButton#res {
-    background-color: #acfcfb;
-    font-family: "Helvetica";
-    font-size: 20pt;
-}
-QPushButton#no:hover, QPushButton#yes:hover, QPushButton#res:hover {
+QPushButton#start:hover, QPushButton#yes:hover, QPushButton#no:hover, QPushButton#res:hover{
     background-color: white;
 }
 
-QLabel {
-    font-size: 14pt;
+QPushButton#yes {
+    background-color: #333223;
+    border-radius: 30px;
+    font-size: 24pt;
+    color: #BE9D71;
 }
-QLabel#wiki, QLabel#description, QLabel#question{
-    font-family: "Helvetica";
-    font-size: 30pt;
+
+QPushButton#no {
+    background-color: #692C23;
+    border-radius: 30px;
+    font-size: 24pt;
+    color: #BE9D71;
 }
-QLabel#author {
-    font-size: 16pt;
+
+QPushButton#res {
+    background-color: #7C6954;
+    border-radius: 18px;
+    font-size: 18pt;
+    color: #312618;
+}
+
+QLabel#description {
+    font-size: 26px;
+    color: #BC6434;
+}
+
+QLabel#wiki {
+    font-size: 20px;
+}
+
+QLabel#last {
+    font-size: 54px;
+    color: #BE9D71;
 }
