@@ -33,6 +33,7 @@ private slots:
   void updateScreenLastPage();
   void programInfo();
   void whatInfo();
+  void printLicense();
 private:
   QPushButton *y_button; // yes-button
   QPushButton *n_button; // no-button

@@ -2,6 +2,15 @@
 #include "page.h"
 #include "pages.cpp"
 
+
+QGraphicsDropShadowEffect* typicalShadow(){
+  QGraphicsDropShadowEffect *shadow = new QGraphicsDropShadowEffect;
+  shadow->setOffset(10, 10);
+  shadow->setBlurRadius(5);
+  return shadow;
+}
+
+
 MainWindow::MainWindow(QWidget *parent)
   : QMainWindow(parent)
 {
@@ -17,6 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
   this->helpMenu->addAction("Справка", this, SLOT(whatInfo()));
   this->helpMenu->addAction("О программе", this, SLOT(programInfo()));
   this->helpMenu->addAction("About Qt", QApplication::instance(), SLOT(aboutQt()));
+  this->helpMenu->addAction("Лицензия", this, SLOT(printLicense()));
   mainMenu->addMenu(helpMenu);
   this->setMenuBar(mainMenu);
 
@@ -55,39 +65,27 @@ MainWindow::MainWindow(QWidget *parent)
   // Start button
   this->startButton = new QPushButton("Начать", this); // Yes-button
   this->startButton->setGeometry(150, 498, 150, 45);
-  QGraphicsDropShadowEffect *shadow = new QGraphicsDropShadowEffect;
-  shadow->setOffset(10, 10);
-  shadow->setBlurRadius(5);
-  this->startButton->setGraphicsEffect(shadow);
+  this->startButton->setGraphicsEffect(typicalShadow());
   this->startButton->setFont(AubreyPro);
 
   // Yes Button
   this->y_button = new QPushButton("Да", this); // Yes-button
   this->y_button->setGeometry(255, 540, 208, 61);
-  QGraphicsDropShadowEffect *shadow1 = new QGraphicsDropShadowEffect;
-  shadow1->setOffset(10, 10);
-  shadow1->setBlurRadius(5);
-  this->y_button->setGraphicsEffect(shadow1);
+  this->y_button->setGraphicsEffect(typicalShadow());
   this->y_button->setFont(AubreyPro);
   this->y_button->hide();
 
  // No Button
   this->n_button = new QPushButton("Нет", this); // Yes-button
   this->n_button->setGeometry(629, 540, 208, 61);
-  QGraphicsDropShadowEffect *shadow2 = new QGraphicsDropShadowEffect;
-  shadow2->setOffset(10, 10);
-  shadow2->setBlurRadius(5);
-  this->n_button->setGraphicsEffect(shadow2);
+  this->n_button->setGraphicsEffect(typicalShadow());
   this->n_button->setFont(AubreyPro);
   this->n_button->hide();
 
   // Return Button
   this->r_button = new QPushButton("Сначала", this); // Yes-button
   this->r_button->setGeometry(918, 33, 121, 36);
-  QGraphicsDropShadowEffect *shadow3 = new QGraphicsDropShadowEffect;
-  shadow3->setOffset(10, 10);
-  shadow3->setBlurRadius(5);
-  this->r_button->setGraphicsEffect(shadow3);
+  this->r_button->setGraphicsEffect(typicalShadow());
   this->r_button->setFont(AubreyPro);
   this->r_button->hide();
 
@@ -129,7 +127,12 @@ void MainWindow::whatInfo()
 
 void MainWindow::programInfo()
 {
-  QMessageBox::about(this,"О программе" , "Version: 4.77b\n\nDate: 18.02.2023\n\nCode: Kirill Osmolovsky (kirillosm09@gmail.com)\n\nDesign: Eva Varaksina (vev_9@mail.ru)\n\nPictures: ru.wikipedia.org\n\nFont: https://fonts-online.ru/fonts/aubrey-pro \n\nScientific adviser: Larisa Vsevolodvna Kolyagina");
+  QMessageBox::about(this,"О программе" , "Version: 4.79b\n\nDate: 18.02.2023\n\nCode: Kirill Osmolovsky (kirillosm09@gmail.com)\n\nDesign: Eva Varaksina (vev_9@mail.ru)\n\nPictures: ru.wikipedia.org\n\nFont: https://fonts-online.ru/fonts/aubrey-pro \n\nScientific adviser: Larisa Vsevolodvna Kolyagina");
+}
+
+void MainWindow::printLicense()
+{
+  QMessageBox::about(this, "BSD-3-Clause license" , "Программа распространяется под лицензией BSD-3-Clause license, полный текст лицензии смотрите в файле \"LICENSE.txt\", поставляемом вместе с программой\n\nCopyright (C) 2022-2023 Kirill Osmolovsky (kirillosm09@gmail.com)");
 }
 
 void MainWindow::handleYesButton()
