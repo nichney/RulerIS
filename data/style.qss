@@ -12,7 +12,7 @@ QMenuBar{
 }
 
 QLabel#question{
-    font-size: 68px;
+    font-size: 64px;
     color: #BE9D71;
 }
 

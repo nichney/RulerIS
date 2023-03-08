@@ -3,70 +3,52 @@
 LOGFILE="compilationLogs/log.txt"
 #Define compillers
 qmakeWindows32="i686-w64-mingw32.static-qmake-qt5"
+qmakeWindows64="x86_64-w64-mingw32.static-qmake-qt5"
 
-# Creating log files
-test -e compilationLogs/log.txt
-if [ $? -ne 0 ]
-    then
-    echo "Creating log file in $LOGFILE"
-    mkdir compilationLogs 2> $LOGFILE
-    touch compilationLogs/log.txt 2> $LOGFILE
-fi
 
 if [ "$1" = "linux" ]
     then
-    echo "Run compilation for linux"
-    qmake >> $LOGFILE 2> $LOGFILE
-    if [ $? -ne 0 ]
-        then
-        echo "qmake error, please read log.txt" 
-        exit
-    fi
-    make >> $LOGFILE 2> $LOGFILE
-    if [ $? -ne 0 ]
-        then
-        echo "make error, please read log.txt" 
-        exit
-    fi
-    echo "End compilation, run removing obj files"
-    rm *.o >> $LOGFILE
-    rm moc_predefs.h >> $LOGFILE
-    rm moc_mainwindow.cpp >> $LOGFILE
-    rm Makefile >> $LOGFILE
-    rm .qmake.stash >> $LOGFILE
-    echo "End removing obj files"
-    echo "Compilation succsessfully finished. Check './RulerIS'"
+    qmake 
+    make 
+
+    rm *.o 
+    rm moc_predefs.h 
+    rm moc_mainwindow.cpp 
+    rm Makefile 
+    rm .qmake.stash
+ 
 
     elif [ "$1" = "win32" ]
         then
-        echo "Run static compilation for windows 32-bit"
-        qmakeWindows32 >> $LOGFILE 2> $LOGFILE
-        if [ $? -ne 0 ]
-            then
-            echo "qmake error, please read log.txt" 
-            exit
-        fi
-        make >> $LOGFILE 2> $LOGFILE
-        if [ $? -ne 0 ]
-            then
-            echo "make error, please read log.txt" 
-            exit
-        fi
-        echo "Moving some files to release.."
+        qmakeWindows32 
+        make 
         cp -r img release
         cp -r data release
+	cp -r font release
         cp icon.ico release
-        cp License.txt release
+        cp LICENSE.txt release
+	cp README.txt release
         cd release
         rm *.o *.h *.cpp
         cd ../
-        echo "End moving."
-        echo "Compilation succsessfully finished. Check 'release' folder"
 
-    elif [ "$1" = "-h" ]
-        then
-        echo "1) './compile.sh linux' to shared compile for linux;"
-        echo "2) './compile.sh win32' to static compile for Windows 32 bit (with MXE, you must add path to MXE to PATH.)"
+    elif [ "$1" = "win64" ]
+	then
+	qmakeWindows64
+	make
+	cp -r img release
+	cp -r data release
+	cp -r font release
+	cp icon.ico release
+	cp LICENSE.txt release
+	cp README.txt release
+	cd release 
+	rm *.o *.h *.cpp
+	cd ../
+
     else
-        echo "No input options!!! Please, enter -h for help"
+        then
+        echo "1) './compile.sh linux' to run compilation for Linux"
+        echo "2) './compile.sh win32' to run compilation for 32 bit Windows"
+	echo "3) ./compile.sh win64 to run compilation for 64 bit Windows"
 fi
