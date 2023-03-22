@@ -127,7 +127,7 @@ void MainWindow::whatInfo()
 
 void MainWindow::programInfo()
 {
-  QMessageBox::about(this,"О программе" , "Version: 4.89b\n\nDate: 06.03.2023\n\nCode: Kirill Osmolovsky (kirillosm09@gmail.com)\n\nDesign: Eva Varaksina (vev_9@mail.ru)\n\nPictures: ru.wikipedia.org\n\nFont: https://fonts-online.ru/fonts/aubrey-pro \n\nScientific adviser: Larisa Vsevolodvna Kolyagina");
+  QMessageBox::about(this,"О программе" , "Version: 4.91b\n\nDate: 22.03.2023\n\nCode: Kirill Osmolovsky (kirillosm09@gmail.com)\n\nDesign: Eva Varaksina (vev_9@mail.ru)\n\nPictures: ru.wikipedia.org\n\nFont: https://fonts-online.ru/fonts/aubrey-pro \n\nScientific adviser: Larisa Vsevolodvna Kolyagina");
 }
 
 void MainWindow::printLicense()
